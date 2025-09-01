@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  car-ai-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: car-ai-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app # 👈 Live reload (mounts local code)
+
+  car-ai-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: car-ai-prod
+    ports:
+      - "8080:8080"
