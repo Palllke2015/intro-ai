@@ -1,0 +1,5 @@
+path: dataset/data
+train: images/train
+val: images/val
+nc: 1
+names: [license_plate]
