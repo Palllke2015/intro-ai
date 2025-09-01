@@ -1,0 +1,12 @@
+# fastapi
+# uvicorn[standard]
+# pillow
+# torch
+# torchvision
+ultralytics
+# scikit-learn
+# opencv-python-headless
+# numpy
+# python-multipart
+# easyocr
+# opencv-python
