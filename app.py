@@ -108,7 +108,9 @@ async def detect_cars(image: UploadFile = File(...)):
         raise HTTPException(404, "No cars detected")
 
     license_plates = detect_license_plate(detected_cars)
-    return license_plates
+    if not license_plates:
+        raise HTTPException(404, "No license plates detected")
+    return {"license_plates": license_plates}
 
 list_of_cars = [2,5,7]
 
